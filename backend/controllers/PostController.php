@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\controllers\style;
+
 
 /**
  * PostController implements the CRUD actions for Post model.
@@ -115,14 +117,20 @@ class PostController extends Controller
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
+
+
     public function actionDelete($id)
     {
         if(Yii::$app->user->can('post-delete')){
         $this->findModel($id)->delete();
-
+        
         return $this->redirect(['index']);
     }
+        else{ echo "<p><center><h1>hello</h1></center></p>";}
+        
+    
 }
+
 
     /**
      * Finds the Post model based on its primary key value.
@@ -140,3 +148,4 @@ class PostController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
+?>
