@@ -36,7 +36,7 @@ public function beforeAction($action) {
     exit;
     return true;
 }
-
+}
     // if ($controller->module !== null) {
     //     if ($user->checkAccess($this->getItemName($controller->module) . $this->separator . '*', $this->params)) {
     //         return true;
@@ -67,5 +67,5 @@ public function beforeAction($action) {
 //     }
 // }
 
-}
+
 ?>
