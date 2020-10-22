@@ -26,7 +26,7 @@ class m201022_093951_create_item_for_rbac extends Migration
         $auth->add($superadmin);
         
         // print_r($auth);
-        return true;
+        // return true;
     }
 
     /**
