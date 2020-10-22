@@ -30,7 +30,7 @@ class m201022_142134_create_post_permission_to_role extends Migration
         $auth->addChild($author, $viewpost);
 
         $auth->addChild($admin, $author);
-
+        
         $auth->addChild($superadmin, $admin);
         $auth->addChild($superadmin, $deletepost);
         return true;
