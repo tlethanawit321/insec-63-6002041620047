@@ -48,7 +48,7 @@ class m201022_135424_create_item_for_rbac extends Migration
         if($superadmin){
             $auth->remove($superadmin);
         }
-        
+    
     return false;
     }
 }

@@ -68,5 +68,6 @@ class m201022_105442_create_permission_of_post extends Migration
             $auth->remove($view);
         }
         return false;
+        
     }
 }

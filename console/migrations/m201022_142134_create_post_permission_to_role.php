@@ -61,7 +61,8 @@ class m201022_142134_create_post_permission_to_role extends Migration
 
         $auth->removeChild($superadmin, $admin);
         $auth->removeChild($superadmin, $deletepost);
-
+        
         return false;
+
     }
 }
