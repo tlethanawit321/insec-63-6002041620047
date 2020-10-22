@@ -8,6 +8,7 @@ use backend\models\AuthItemSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\components\AccessControl;
 
 /**
  * AuthItemController implements the CRUD actions for AuthItem model.
@@ -20,6 +21,10 @@ class AuthItemController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                //'class' => '\common\components\AccessControl',
+                'class' => AccessControl::class,
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
