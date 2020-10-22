@@ -3,9 +3,9 @@
 use yii\db\Migration;
 
 /**
- * Class m201022_093951_create_item_for_rbac
+ * Class m201022_135424_create_item_for_rbac
  */
-class m201022_093951_create_item_for_rbac extends Migration
+class m201022_135424_create_item_for_rbac extends Migration
 {
     /**
      * {@inheritdoc}
@@ -13,6 +13,7 @@ class m201022_093951_create_item_for_rbac extends Migration
     public function safeUp()
     {
         $auth = yii::$app->authManager;
+
         $admin=$auth->createRole('admin');
         $admin->description = 'Admin';
         $auth->add($admin);
@@ -24,11 +25,11 @@ class m201022_093951_create_item_for_rbac extends Migration
         $superadmin=$auth->createRole('super-admin');
         $superadmin->description = 'Super Admin';
         $auth->add($superadmin);
-        
-        // print_r($auth);
-        // return true;
-    }
 
+        return true;
+        // print_r($auth);
+        
+    }
     /**
      * {@inheritdoc}
      */
@@ -47,23 +48,11 @@ class m201022_093951_create_item_for_rbac extends Migration
         if($superadmin){
             $auth->remove($superadmin);
         }
-        echo "m201022_093951_create_item_for_rbac cannot be reverted.\n";
-
-        return false;
+        
+    return false;
     }
-
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function up()
-    {
-
-    }
-
-    public function down()
-    {
-        echo "m201022_093951_create_item_for_rbac cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }
+
+ 
+    
+

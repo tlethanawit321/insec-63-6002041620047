@@ -21,10 +21,10 @@ class AuthItemController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                //'class' => '\common\components\AccessControl',
-                'class' => AccessControl::class,
-            ],
+            // 'access' => [
+            //     //'class' => '\common\components\AccessControl',
+            //     'class' => AccessControl::class,
+            // ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
