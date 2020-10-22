@@ -5,7 +5,7 @@ use yii\rbac\DbManager;
 /**
  * Class m201022_150734_create_assignment_of_post
  */
-class m201022_150734_create_assignment_of_post extends Migration
+class m201022_150734_create_assign_any_user_to_role extends Migration
 {
     
     /**
